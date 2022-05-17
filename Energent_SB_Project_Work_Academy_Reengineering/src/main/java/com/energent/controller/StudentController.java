@@ -75,7 +75,7 @@ public class StudentController {
 	
 	//UPDATE::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	@PutMapping("/{code}/students/update/{fiscalCode}")
-	public Map<String,Student> updataStudent( @RequestBody Student student,
+	public Map<String,Student> updateStudent( @RequestBody Student student,
 			@PathVariable String code, @PathVariable String fiscalCode ) {
 		
 		return studentService.updateStudent(student, code);
