@@ -1,9 +1,23 @@
-body {
+body{
 	background-image: url("/custom-pages/Academy background.jpg");
 	background-repeat: no-repeat;
-	background-position: center 35%;
+	background-position: center 20%;
 	background-size: cover;
 }
+
+h1{
+	font-family: 'Montserrat', sans-serif;
+}
+
+th{
+	font-family: 'Montserrat', sans-serif;
+}
+.container{
+	background-image:url("/custom-pages/form background.png");
+	padding:30px;
+	
+}
+
 
 .btn3d {
 	position: relative;
@@ -30,9 +44,6 @@ body {
 .btn3d.btn-success {
 	box-shadow: 0 0 0 1px #31c300 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #5eb924, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
 	background-color: #78d739;
-	
-       left:30%;
-       
        position: center;
        
 }
@@ -69,6 +80,7 @@ body {
 	color: #ffffff;
 	box-shadow: 0 0 0 1px #1ba922 inset, 0 0 0 2px rgba(255, 255, 255, 0.10) inset, 0 8px 0 0 #008000, 0 8px 8px 1px rgba(0, 0, 0, .2);
 	background-color: #32CD32;
+	font-family: 'Comfortaa', cursive;
 }
 
 .btn3d.btn-default:active,
@@ -77,3 +89,21 @@ body {
 	box-shadow: 0 0 0 1px #36e748 inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, .1);
 	background-color: #36e748;
 }
+
+.btn3d.btn-white {
+	color: #666666;
+	box-shadow: 0 0 0 1px #ebebeb inset, 0 0 0 2px rgba(255, 255, 255, 0.10) inset, 0 8px 0 0 #f5f5f5, 0 8px 8px 1px rgba(0, 0, 0, .2);
+	background-color: #fff;
+}
+
+.btn3d.btn-white:active,
+.btn3d.btn-white.active {
+	color: #666666;
+	box-shadow: 0 0 0 1px #ebebeb inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, .1);
+	background-color: #fff;
+}
+
+
+
+
+

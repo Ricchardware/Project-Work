@@ -10,18 +10,22 @@
 <title>Academy List</title>
 <link href="../../webjars/bootstrap/4.0.0/css/bootstrap.min.css"
 	rel="stylesheet"/>
-	<link href="${pageContext.request.contextPath}/css/custom.css" rel="stylesheet" type="text/css">
+	<link href="${pageContext.request.contextPath}/css/academies.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap">
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
 <script src="../../webjars/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="../../webjars/jquery/3.0.0/js/jquery.min.js"></script>
 </head>
 <body style="background-color: #333333">
 	<font color="white"> <br>
-		<h1>
-			<center style="font-family: Georgia">ACADEMIES</center>
-		</h1> </br>
 		<div class="container">
+		<h1>
+			<center>ACADEMIES</center>
+		</h1> </br>
+		
 			<table class="table table-hover"
 				style="background-color: #333333; color: white;">
+
 				<thead bgcolor="#745d5d">
 					<tr>
 						<th scope="col">Code</th>
@@ -31,7 +35,8 @@
 						<th scope="col">Start Date</th>
 						<th bgcolor="#39B3D7" scope="col"><center>Update</center></th>
 						<th bgcolor="#78d739" scope="col"><center>View Students</center></th>
-						<th bgcolor="dc3545" scope="col"><center>Delete</th>
+						<th bgcolor="dc3545" scope="col"><center>Delete</center></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -55,8 +60,7 @@
 								</center></td>
 							<td><center>
 									<spring:url value="/${academy.code}/students" var="studsURL" />
-									<div class="container">
-									<div class="row">
+									
 									<a type="button" class="btn btn-success btn-lg btn3d" href="${studsURL}" role="button">
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 											fill="currentColor" class="bi bi-person-lines-fill"
@@ -66,8 +70,7 @@
 								</center></td>
 							<td><center>
 									<spring:url value="/${academy.code}/remove" var="deleteURL" />
-									<div class="container">
-									<div class="row">
+									
 									<a type="button" class="btn btn-danger btn-lg btn3d" href="${deleteURL}" role="button">
 										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 											fill="currentColor" class="bi bi-trash-fill"

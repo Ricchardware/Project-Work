@@ -10,6 +10,8 @@
 <title>Add Academy</title>
 <link href="../../webjars/bootstrap/4.0.0/css/bootstrap.min.css"
 	rel="stylesheet" />
+	<link href="${pageContext.request.contextPath}/css/academy.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
 <script src="../../webjars/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="../../webjars/jquery/3.0.0/js/jquery.min.js"></script>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -61,16 +63,17 @@
 			</div>
 			<div class="form-group">
 			<c:if test="${code == null}">
-			<button type="submit" class="btn btn-success">Add Academy</button>
+			<button type="button button-success" class="btn3d btn btn-default btn-lg" >Submit</button>
+			<span class="glyphicon glyphicon-download-alt"></span>
 			</c:if>
 			<c:if test="${code != null}">
-			<button type="submit" class="btn btn-info">Update Academy</button>
+			<button type="submit" class="btn btn-info btn-lg btn3d">Update<span class="glyphicon glyphicon-question"></span></button>
 			</c:if>
 		</form:form>
 		&emsp;&emsp;
 			<spring:url value="/home" var="homeURL" />
 		
-			<a class="btn btn-light" href="${homeURL}" role="button">
+			<a type="button" class="btn3d btn btn-white btn-lg" href="${homeURL}" role="button">
 			
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
   			<path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>

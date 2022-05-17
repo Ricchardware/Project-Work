@@ -11,6 +11,9 @@
 <link href="../../webjars/bootstrap/4.0.0/css/bootstrap.min.css"
 	rel="stylesheet" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="${pageContext.request.contextPath}/css/student.css"
+	rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
 <script src="../../webjars/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="../../webjars/jquery/3.0.0/js/jquery.min.js"></script>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -32,16 +35,6 @@
 			<!--ModelAttribute=n collegamento tra model e view     -->
 			<form:form modelAttribute="student" method="post" action="${addURL}"
 				cssClass="form">
-				<div class="form-group">
-					<label>First Name</label>
-					<form:input path="firstName" cssClass="form-control" id="firstName"
-						autocomplete="off" style="background-color:#18191A; color:white" required="required"/>
-				</div>
-				<div class="form-group">
-					<label>Last Name</label>
-					<form:input path="lastName" cssClass="form-control" id="lastName"
-						autocomplete="off" style="background-color:#18191A; color:white" required="required"/>
-				</div>
 				<c:if test="${fiscalCode == null}">
 				<div class="form-group">
 					<label>Fiscal Code</label>
@@ -59,23 +52,35 @@
 				</div>
 				</c:if>
 				<div class="form-group">
+					<label>First Name</label>
+					<form:input path="firstName" cssClass="form-control" id="firstName"
+						autocomplete="off" style="background-color:#18191A; color:white" required="required"/>
+				</div>
+				<div class="form-group">
+					<label>Last Name</label>
+					<form:input path="lastName" cssClass="form-control" id="lastName"
+						autocomplete="off" style="background-color:#18191A; color:white" required="required"/>
+				</div>
+				
+				<div class="form-group">
 					<label>Age</label>
 					<form:input path="age" cssClass="form-control" id="age"
 						autocomplete="off" type="number" style="background-color:#18191A; color:white" required="required"/>
 				</div>
 				<div class="form-group">
 				<c:if test="${fiscalCode == null}">
-				<button href="addURL" type="submit" class="btn btn-success">Add Student</button>
+				<button href="addURL" type="submit" class="btn3d btn btn-default btn-lg" >Submit</button>
+				<span class="glyphicon glyphicon-download-alt"></span>
 				</c:if>
 			<c:if test="${fiscalCode != null}">
-				<button href="addURL" type="submit" class="btn btn-info">Update Student</button>
+				<button href="addURL" type="submit" class="btn btn-info btn-lg btn3d">Update Student</button>
 			</c:if>
 			</form:form>
 			
 			&emsp;&emsp;
 			<spring:url value="/home" var="homeURL" />
 		
-			<a class="btn btn-light" href="${homeURL}" role="button">
+			<a class="btn3d btn btn-white btn-lg" href="${homeURL}" role="button">
 			
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
   			<path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
@@ -83,7 +88,7 @@
 	</svg></a>
 		&emsp;&emsp;
 			<spring:url value="/${academy.code }/students" var="studsURL" />
-			<a class="btn btn-light" href="${studsURL}" role="button">
+			<a class="btn3d btn btn-white btn-lg" href="${studsURL}" role="button">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
   			<path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
 </svg></a>
